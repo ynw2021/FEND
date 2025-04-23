@@ -34,7 +34,7 @@ python test_nuscenes_fend.py --model models/nuScenes_model/trajectron_map_int_fe
 ```
 
 
-We use the Traj++EWTA without resampling as the baseline model to select the hard samples, as our method is implemented on it. Testing with the Traj++EWTA without resampling as the baseline model to select hard samples can be done as follows:
+We use the Traj++EWTA without resampling as the baseline model to select the hard samples, as our method is implemented on it. Testing with the Traj++EWTA with resampling as the baseline model to select hard samples can be done as follows:
 
 ```
 python test_nuscenes_fend.py --model models/nuScenes_model/trajectron_map_int_fend_ewta_withoutfrequency --checkpoint 25 --data data/nuScenes_test_full.pkl --kalman kalman/nuScenes_VEHICLE_test_ewta_baseline_withfrequency.pkl --node_type VEHICLE
