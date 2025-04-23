@@ -424,9 +424,7 @@ def process_data(data_path, version, output_path, val_split):
     ns_scene_names['val'] = val_scenes
     # ns_scene_names['test'] = test_scene_names
 
-    # for data_class in ['train', 'val', 'test']:
-    # for data_class in ['train', 'val']:
-    for data_class in ['val']:
+    for data_class in ['train', 'val', 'test']:
         env = Environment(node_type_list=['VEHICLE', 'PEDESTRIAN'], standardization=standardization)
         attention_radius = dict()
         attention_radius[(env.NodeType.PEDESTRIAN, env.NodeType.PEDESTRIAN)] = 10.0
