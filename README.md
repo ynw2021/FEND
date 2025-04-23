@@ -6,6 +6,15 @@ Framework for Long-tail Trajectory Prediction'
 We use the same requirements as the Trajectron++, see:
 https://github.com/StanfordASL/Trajectron-plus-plus
 
+### Environment Setup
+
+Create a conda environment.
+
+```
+conda create --name trajectron++ python=3.9 -y
+source activate trajectron++
+pip install -r requirements.txt
+```
 
 ### Data
 
