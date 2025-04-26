@@ -47,7 +47,7 @@ def parse_arguments():
     parser.add_argument("--node_type", type=str,default='VEHICLE')
     # parser.add_argument("--kalman", type=str,default='kalman/nuScenes_VEHICLE_test_ewta_6.pkl')
     parser.add_argument("--baseline_error", type=str, 
-                        default='./kalman/nuScenes_VEHICLE_test_ewta.pkl')
+                        default='./kalman/nuScenes_VEHICLE_test_ewta_withoutfrequency.pkl')
                         # default='./kalman/nuScenes_VEHICLE_test_ewta_baseline_withfrequency.pkl')
     parser.add_argument("--prefix", type=str, default='nuscenes_v')
 
@@ -66,7 +66,7 @@ def load_model(model_dir, env, ts=100):
     # model_registrar.load_models(ts)
     if 'ewta' in model_dir and 'nuScenes' not in model_dir:
         model_registrar.load_models(ts)
-    elif 'justlongtail' in model_dir:
+    elif 'nuScenes_model' in model_dir:
         model_registrar.load_models(ts)
     elif 'new_model' in model_dir:
         model_registrar.load_models(ts)    
